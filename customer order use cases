@@ -1,0 +1,6 @@
+#highest purchase amount with their ID and order date, for those customers who have a higher purchase amount in a day is within the range 2000 and 6000
+
+SELECT customer_id,ord_date,max(purch_amt)
+FROM table
+group by customer_id,ord_date
+having max(purch_amt) between 2000 and 6000;
