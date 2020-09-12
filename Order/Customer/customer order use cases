@@ -1,0 +1,6 @@
+#SQL statement to find the highest purchase amount with their ID and order date, for only those customers who have highest purchase amount in a day is more than 2000
+
+SELECT Customer_id,ord_date,MAX(purch_amt)
+FROM table
+group by customer_id,ord_date
+HAVING max(purch_amt)>2000;
